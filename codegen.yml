@@ -1,0 +1,15 @@
+schema: https://countries.trevorblades.com/
+documents: src/**/*.graphql
+generates:
+  src/graphql/generated/graphql.ts:
+    plugins:
+      - typescript
+      - typescript-operations
+      - typescript-react-apollo
+    config:
+      reactApolloVersion: 3
+      withHooks: true # generate React hooks
+      withHOC: false
+      withComponent: false
+      camelCasedEnums: true # ensure enums are camel-cased
+      avoidOptionals: true # avoid optional fields in the generated types
