@@ -32,7 +32,7 @@ export const CountriesPage: React.FC = () => {
         value={filter}
         onChange={(code) => dispatch(setFilter(code))}
       />
-      <div className="bg-white dark:bg-gray-800 shadow rounded p-4">
+      <div className="bg-white dark:bg-gray-800 shadow rounded p-4 mb-40">
         <CountryTable data={filtered} />
       </div>
     </div>
