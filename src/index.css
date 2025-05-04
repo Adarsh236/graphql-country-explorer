@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  @apply w-full h-full;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply flex bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 m-0 w-full min-h-screen;
+}
